@@ -17,4 +17,10 @@ public class EventTest {
         assertEquals("Appetizers", testEvent.getFood());
     }
 
+    @Test
+    public void getBeverages_fetchesBeverageSelection_beverage() throws Exception {
+        Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
+        assertEquals("Soda", testEvent.getBeverages());
+    }
+
 }
