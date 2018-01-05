@@ -64,11 +64,11 @@ public class App {
                     System.out.println("Let's try again.");
                     break;
                 }
-
-                System.out.println(String.format("The total cost of your order so far is $%d.", eventTotalCost));
-
-
-                System.out.println("We are running a few coupons currently: \n [1] Large groups \n ");
+                System.out.println(eventTotalCost);
+//                System.out.println(String.format("The total cost of your order so far is $%d.", eventTotalCost));
+//
+//
+//                System.out.println("We are running a few coupons currently: \n [1] Large groups \n ");
 
 
 
