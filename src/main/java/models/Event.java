@@ -58,6 +58,10 @@ public class Event {
             bevTotal += (8 * guests);
         } else if (beverages.equals("3")) {
             bevTotal += (12 * guests);
+        } else if (beverages.equals("4")) {
+            bevTotal += (13 * guests);
+        } else if (beverages.equals("5")) {
+            bevTotal += (17 * guests);
         } else {
             System.out.println("There has been an input error. Please enter a valid beverage #.");
         }

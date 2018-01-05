@@ -21,6 +21,15 @@ public class App {
 
                 if (!(foodServiceChoice.equals("1") || foodServiceChoice.equals("2") || foodServiceChoice.equals("3") || foodServiceChoice.equals("4"))) {
                     System.out.println("Sorry, was there an input error? Please make sure to select one of our # options.");
+                    break;
+                }
+
+                System.out.println("Great! We've food taken care of but everyone we undoubtedly need something to drink. \nWe have 5 drink services we provide: \n\n[1] Non Alcoholic Beverage Service \n[2] Beer Service \n[3] Full Bar Service \n[4] Beer and Non Alcoholic Beverage \n[5] Full Bar and Non Alcoholic Beverage  \n\n Please enter the corresponding beverage service item # to select your beverage service.");
+                String bevChoice = bufferedReader.readLine();
+
+                if (!(bevChoice.equals("1") || bevChoice.equals("2") || bevChoice.equals("3") || bevChoice.equals("4") || bevChoice.equals("5"))) {
+                    System.out.println("Sorry, was there an input error? Please make sure to select one of our # options.");
+                    break;
                 }
 
             } catch (IOException e) {
