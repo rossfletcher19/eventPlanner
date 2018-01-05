@@ -26,7 +26,7 @@ public class EventTest {
     @Test
     public void getEntertainment_fetchesEntertainmentSelection_Entertainment() throws Exception {
         Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
-        assertEquals("Band", testEvent.getEntertainment());
+        assertEquals("DJ", testEvent.getEntertainment());
     }
 
 }
