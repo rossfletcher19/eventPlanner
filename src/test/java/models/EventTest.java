@@ -14,13 +14,13 @@ public class EventTest {
     @Test
     public void getFood_fetchesFoodSelection_food() throws Exception {
         Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
-        assertEquals("Appetizers", testEvent.getFood());
+        assertEquals("Main Course", testEvent.getFood());
     }
 
     @Test
     public void getBeverages_fetchesBeverageSelection_beverage() throws Exception {
         Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
-        assertEquals("Soda", testEvent.getBeverages());
+        assertEquals("Alcohol", testEvent.getBeverages());
     }
 
 }
