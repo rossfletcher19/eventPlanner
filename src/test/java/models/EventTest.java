@@ -32,7 +32,7 @@ public class EventTest {
     @Test
     public void getGuests_fetchesGuestsInt_int() throws Exception {
         Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
-        assertEquals(Integer.valueOf(78), testEvent.getGuests());
+        assertEquals(Integer.valueOf(40), testEvent.getGuests());
 
     }
 
