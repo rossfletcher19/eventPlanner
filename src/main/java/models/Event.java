@@ -23,4 +23,16 @@ public class Event {
     public String getBeverages() {
         return beverages;
     }
+
+    public String getEntertainment() {
+        return entertainment;
+    }
+
+    public Integer getGuests() {
+        return guests;
+    }
+
+    public String getCoupon() {
+        return coupon;
+    }
 }
