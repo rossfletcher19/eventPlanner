@@ -35,4 +35,12 @@ public class Event {
     public String getCoupon() {
         return coupon;
     }
+
+    public int calcTotalCost() {
+        Integer mealTotal = 0;
+        Integer bevTotal = 0;
+        Integer entTotal = 0;
+
+        return Integer.valueOf(2000);
+    }
 }

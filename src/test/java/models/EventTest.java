@@ -2,6 +2,7 @@ package models;
 
 import org.junit.Test;
 
+
 import static org.junit.Assert.*;
 
 public class EventTest {
@@ -33,7 +34,13 @@ public class EventTest {
     public void getGuests_fetchesGuestsInt_int() throws Exception {
         Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
         assertEquals(Integer.valueOf(40), testEvent.getGuests());
-
     }
+
+    @Test
+    public void calcCost_generateEventCostForUser_totalCost() throws Exception {
+        Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
+        assertEquals(1500, testEvent.calcTotalCost());
+    }
+
 
 }
