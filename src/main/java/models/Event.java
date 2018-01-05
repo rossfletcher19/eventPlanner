@@ -41,9 +41,9 @@ public class Event {
         Integer bevTotal = 0;
         Integer entTotal = 0;
         if (food.equals("1")) {
-            mealTotal += (15 * guests);
-        } else if (food.equals("2")) {
             mealTotal += (8 * guests);
+        } else if (food.equals("2")) {
+            mealTotal += (15 * guests);
         } else if (food.equals("3")) {
             mealTotal += (18 * guests);
         } else if (food.equals("4")){
