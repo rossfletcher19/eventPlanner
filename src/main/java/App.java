@@ -53,7 +53,7 @@ public class App {
 
                 System.out.println(String.format("------------------------------ \nSo far your order is: \nFood: %s \nBeverage: %s \nEntertainment: %s \nFor %d guests. \n------------------------------", orderFood, orderBev, orderEnt, orderGuests));
 
-                System.out.println("You can now calculate the entire cost of your order if you are happy with it, or you can choose to start over. \n1 for Calculate. \n2 for Start Over.");
+                System.out.println("You can now calculate the entire cost of your order if you are happy with it, or you can choose to start over. \nEnter 1 for Calculate, 2 for Start Over.");
                 String calcOrStartOverStep = bufferedReader.readLine();
 
 
