@@ -41,6 +41,6 @@ public class Event {
         Integer bevTotal = 0;
         Integer entTotal = 0;
 
-        return Integer.valueOf(2000);
+        return Integer.valueOf(1500);
     }
 }
