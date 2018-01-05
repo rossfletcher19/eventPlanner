@@ -12,9 +12,9 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 | Behavior  | Input  | Output  |   |   |
 |---|---|---|---|---|
 | Instance of Event  | True  | True  |   |   |
-| Accepts user food input  | "1"  | "1"  |   |   |
-| Accepts user beverage input  | "2"  | "2"  |   |   |
-| Accepts user entertainment input  | "2"  | "2"  |   |   |
+| Accepts user food input  | "Hawaiian Style"  | "Hawaiian Style"  |   |   |
+| Accepts user beverage input  | "Full Bar"  | "Full Bar"  |   |   |
+| Accepts user entertainment input  | "Live DJ"  | "Live DJ"  |   |   |
 |   |   |   |   |   |
 |   |   |   |   |   |
 
