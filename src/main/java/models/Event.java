@@ -9,8 +9,14 @@ public class Event {
     private String coupon;
 
     public Event(String food, String beverages, String entertainment, Integer guests) {
-
+        this.food = food;
+        this.beverages = beverages;
+        this.entertainment = entertainment;
+        this.guests = guests;
+        this.coupon = "";
     }
 
-
+    public String getFood() {
+        return food;
+    }
 }
