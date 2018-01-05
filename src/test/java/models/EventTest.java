@@ -24,9 +24,16 @@ public class EventTest {
     }
 
     @Test
-    public void getEntertainment_fetchesEntertainmentSelection_Entertainment() throws Exception {
+    public void getEntertainment_fetchesEntertainmentSelection_entertainment() throws Exception {
         Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
         assertEquals("DJ", testEvent.getEntertainment());
+    }
+
+    @Test
+    public void getGuests_fetchesGuestsInt_int() throws Exception {
+        Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
+        assertEquals(Integer.valueOf(78), testEvent.getGuests());
+
     }
 
 }
