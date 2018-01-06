@@ -38,9 +38,8 @@ public class EventTest {
 
     @Test
     public void calcCost_generateEventCostForUser_totalCost() throws Exception {
-        Event testEvent = new Event("Main Course", "Alcohol", "DJ", 40);
-        assertEquals(1500, testEvent.calcTotalCost());
+        Event testEvent = new Event("Apps", "Full Bar", "Live DJ", 40);
+        assertEquals(1800, testEvent.calcTotalCost());
     }
-
 
 }

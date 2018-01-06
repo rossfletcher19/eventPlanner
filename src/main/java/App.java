@@ -64,15 +64,70 @@ public class App {
                     System.out.println("Let's try again.");
                     break;
                 }
-                System.out.println(eventTotalCost);
-//                System.out.println(String.format("The total cost of your order so far is $%d.", eventTotalCost));
+
+                System.out.println(String.format("The total cost of your order so far is $%d.", eventTotalCost));
 //
 //
-//                System.out.println("We are running a few coupons currently: \n [1] Large groups \n ");
+                System.out.println("We are running a few coupons currently: \n\n[Large groups] \n[A Toast] \n\nWould you like to see if you qualify for a coupon? Y or N");
+                String yesNoCoupon = bufferedReader.readLine();
 
+                if (yesNoCoupon.equals("Y")) {
+                    System.out.println("Please enter your coupon code: \n[Large group] or \n[A Toast]");
+                    String couponCode = bufferedReader.readLine();
+                    if (couponCode.equals("Large group") && orderGuests > 149) {
+                        if (orderEnt.equals("Live DJ")) {
+                            eventTotalCost -= 500;
+                            System.out.println("$500 off the DJ!!");
+                            newEvent.coupon = "$500 off the DJ!";
+                        } else if (orderEnt.equals("None")) {
+                            System.out.println("You didn't add a DJ and you tried to use a DJ coupon. Would you like to add one? yes or no");
+                            String addLiveDJ = bufferedReader.readLine();
+                            if (addLiveDJ.equals("yes")){
+                                newEvent.entertainment = "Live DJ";
+                                System.out.println("Now you'll get $500 off the cost of the DJ!");
+                                eventTotalCost -= 500;
+                                newEvent.coupon = "$500 off the DJ!";
+                            } else if (addLiveDJ.equals("no")) {
+                                System.out.println("No Problem! Moving on!");
+                            } else {
+                                System.out.println("Sorry that wasn't one of the options.");
+                                break;
+                            }
+                        } else if (orderEnt.equals("Live Band")) {
+                            System.out.print("That coupon is for $500 off a Live DJ but you have chosen a Live Band. Would you like to switch to a Live DJ? yes or no");
+                            String addLiveDJ = bufferedReader.readLine();
+                            if (addLiveDJ.equals("yes")) {
+                                newEvent.entertainment = "Live DJ";
+                                eventTotalCost -= 500;
+                            }
+                        } else if (orderEnt.equals("Comedy Show")) {
+                            System.out.print("That coupon is for $500 off a Live DJ but you have chosen a Comedy Show. Would you like to switch to a Live DJ? yes or no");
+                            String addLiveDJ = bufferedReader.readLine();
+                            if (addLiveDJ.equals("yes")) {
+                                newEvent.entertainment = "Live DJ";
+                                eventTotalCost -= 500;
+                            }
+                        } else {
+                            System.out.println("Sorry, coupon error.");
+                        }
+                    } else if (couponCode.equals("A Toast")) {
+                        System.out.println("Congrats! We'll throw in some champagne to help toast your event!");
+                        newEvent.coupon = "Complimentary champagne to toast the event!";
+                    } else if (couponCode.equals("Large group") && newEvent.guests < 150) {
+                            System.out.println("Sorry, that coupon requires 150+ guests");
+                    } else {
+                        System.out.println("Sorry, that does not seem to be a valid coupon code.");
+                    }
+                }
 
+                String userCoupon = newEvent.getCoupon();
 
+                System.out.println(String.format("---------------------------------- \nThank you for choosing HomeStyle Services. \nYour order, Food: %s, Beverage: %s, and Entertainment: %s for %d people comes to $%d", orderFood, orderBev, orderEnt, orderGuests, eventTotalCost));
+                if (!userCoupon.equals("")) {
+                    System.out.print(String.format("Coupon: %s", userCoupon));
+                }
 
+                    runProgram = false;
             } catch (IOException e) {
                 e.printStackTrace();
             }
