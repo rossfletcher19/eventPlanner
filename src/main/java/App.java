@@ -78,15 +78,15 @@ public class App {
                         if (orderEnt.equals("Live DJ")) {
                             eventTotalCost -= 500;
                             System.out.println("$500 off the DJ!!");
-                            newEvent.coupon = "$500 off the DJ!";
+                            newEvent.setCoupon("$500 off the DJ!");
                         } else if (orderEnt.equals("None")) {
                             System.out.println("You didn't add a DJ and you tried to use a DJ coupon. Would you like to add one? yes or no");
                             String addLiveDJ = bufferedReader.readLine();
                             if (addLiveDJ.equals("yes")){
-                                newEvent.entertainment = "Live DJ";
+                                newEvent.setEntertainment("Live DJ");
                                 System.out.println("Now you'll get $500 off the cost of the DJ!");
                                 eventTotalCost -= 500;
-                                newEvent.coupon = "$500 off the DJ!";
+                                newEvent.setCoupon("$500 off the DJ!");
                             } else if (addLiveDJ.equals("no")) {
                                 System.out.println("No Problem! Moving on!");
                             } else {
@@ -97,14 +97,14 @@ public class App {
                             System.out.print("That coupon is for $500 off a Live DJ but you have chosen a Live Band. Would you like to switch to a Live DJ? yes or no");
                             String addLiveDJ = bufferedReader.readLine();
                             if (addLiveDJ.equals("yes")) {
-                                newEvent.entertainment = "Live DJ";
+                                newEvent.setEntertainment("Live DJ");
                                 eventTotalCost -= 500;
                             }
                         } else if (orderEnt.equals("Comedy Show")) {
                             System.out.print("That coupon is for $500 off a Live DJ but you have chosen a Comedy Show. Would you like to switch to a Live DJ? yes or no");
                             String addLiveDJ = bufferedReader.readLine();
                             if (addLiveDJ.equals("yes")) {
-                                newEvent.entertainment = "Live DJ";
+                                newEvent.setEntertainment("Live DJ");
                                 eventTotalCost -= 500;
                             }
                         } else {
@@ -112,8 +112,8 @@ public class App {
                         }
                     } else if (couponCode.equals("A Toast")) {
                         System.out.println("Congrats! We'll throw in some champagne to help toast your event!");
-                        newEvent.coupon = "Complimentary champagne to toast the event!";
-                    } else if (couponCode.equals("Large group") && newEvent.guests < 150) {
+                        newEvent.setCoupon("Complimentary champagne to toast the event!");
+                    } else if (couponCode.equals("Large group") && newEvent.getGuests() < 150) {
                             System.out.println("Sorry, that coupon requires 150+ guests");
                     } else {
                         System.out.println("Sorry, that does not seem to be a valid coupon code.");
