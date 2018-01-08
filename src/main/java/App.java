@@ -26,7 +26,7 @@ public class App {
                     break;
                 }
 
-                System.out.println("Great! We've food taken care of but everyone we undoubtedly need something to drink. \nWe have 5 drink services we provide: \n\n[Non Alcoholic Beverage] $5/person \n[Beer Service] $8/person \n[Full Bar] $12/person \n[Beer and Non Alcoholic] $12/person \n[Full Bar and Non Alcoholic] $17/person  \n\n Please enter the corresponding beverage service item name in brackets to select your beverage service.");
+                System.out.println("Great! We've food taken care of but everyone will undoubtedly need something to drink. \nWe have 5 drink services we provide: \n\n[Non Alcoholic Beverage] $5/person \n[Beer Service] $8/person \n[Full Bar] $12/person \n[Beer and Non Alcoholic] $12/person \n[Full Bar and Non Alcoholic] $17/person  \n\n Please enter the corresponding beverage service item name in brackets to select your beverage service.");
                 String bevChoice = bufferedReader.readLine();
 
                 if (!(bevChoice.equals("Non Alcoholic Beverage") || bevChoice.equals("Beer Service") || bevChoice.equals("Full Bar") || bevChoice.equals("Beer and Non Alcoholic") || bevChoice.equals("Full Bar and Non Alcoholic"))) {
