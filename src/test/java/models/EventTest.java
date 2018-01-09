@@ -43,9 +43,15 @@ public class EventTest {
     }
 
     @Test
-    public void MealTotal_getMealTotalU_mealTotal() throws Exception {
+    public void MealTotal_getMealTotal_mealTotal() throws Exception {
         Event testEvent = new Event("Apps", "","",1);
         assertEquals(8, testEvent.calcTotalCost());
+    }
+
+    @Test
+    public void bevTotal_getBevTotal_bevTotal() throws Exception {
+        Event testEvent = new Event("", "Full Bar and Non Alcoholic","",5);
+        assertEquals(0, testEvent.calcTotalCost());
     }
 
 }
