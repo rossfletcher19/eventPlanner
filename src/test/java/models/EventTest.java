@@ -42,4 +42,10 @@ public class EventTest {
         assertEquals(1800, testEvent.calcTotalCost());
     }
 
+    @Test
+    public void MealTotal_getMealTotalU_mealTotal() throws Exception {
+        Event testEvent = new Event("Apps", "","",0);
+        assertEquals(8, testEvent.calcTotalCost());
+    }
+
 }
