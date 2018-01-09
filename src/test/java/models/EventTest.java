@@ -51,7 +51,7 @@ public class EventTest {
     @Test
     public void bevTotal_getBevTotal_bevTotal() throws Exception {
         Event testEvent = new Event("", "Full Bar and Non Alcoholic","",5);
-        assertEquals(0, testEvent.calcTotalCost());
+        assertEquals(85, testEvent.calcTotalCost());
     }
 
 }
