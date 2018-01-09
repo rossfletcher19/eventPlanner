@@ -54,4 +54,10 @@ public class EventTest {
         assertEquals(85, testEvent.calcTotalCost());
     }
 
+    @Test
+    public void entTotal_getEntTotal_entTotal() throws Exception {
+        Event testEvent = new Event("", "","Comedy Show",1);
+        assertEquals(0, testEvent.calcTotalCost());
+    }
+
 }
