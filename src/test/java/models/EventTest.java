@@ -44,7 +44,7 @@ public class EventTest {
 
     @Test
     public void MealTotal_getMealTotalU_mealTotal() throws Exception {
-        Event testEvent = new Event("Apps", "","",0);
+        Event testEvent = new Event("Apps", "","",1);
         assertEquals(8, testEvent.calcTotalCost());
     }
 
