@@ -22,7 +22,7 @@ public class App {
 
 
                 if (!(foodServiceChoice.equals("Apps") || foodServiceChoice.equals("Hawaiian Style") || foodServiceChoice.equals("HomeStyle BBQ") || foodServiceChoice.equals("Mediterranean Dinner"))) {
-                    System.out.println("Sorry, was there an input error? Please make sure to select one of our # options.");
+                    System.out.println("Sorry, was there an input error? Please make sure to enter one of our options in [brackets].");
                     break;
                 }
 
@@ -30,7 +30,7 @@ public class App {
                 String bevChoice = bufferedReader.readLine();
 
                 if (!(bevChoice.equals("Non Alcoholic Beverage") || bevChoice.equals("Beer Service") || bevChoice.equals("Full Bar") || bevChoice.equals("Beer and Non Alcoholic") || bevChoice.equals("Full Bar and Non Alcoholic"))) {
-                    System.out.println("Sorry, was there an input error? Please make sure to select one of our # options.");
+                    System.out.println("Sorry, was there an input error? Please make sure to enter one of our options in [brackets].");
                     break;
                 }
 
@@ -38,7 +38,7 @@ public class App {
                 String entChoice = bufferedReader.readLine();
 
                 if (!(entChoice.equals("Live DJ") || entChoice.equals("Live Band") || entChoice.equals("Comedy Show") || entChoice.equals("None"))) {
-                    System.out.println("Sorry, was there an input error? Please make sure to select one of our # options.");
+                    System.out.println("Sorry, was there an input error? Please make sure to enter one of our options in [brackets].");
                     break;
                 }
 
